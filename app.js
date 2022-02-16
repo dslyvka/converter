@@ -1,4 +1,5 @@
-document.querySelector('.result').addEventListener('click', () => {
+document.querySelector('.result').addEventListener('submit', e => {
+  e.preventDefault();
   let number = parseInt(document.querySelector('.number').value);
   let numSystem = parseInt(document.querySelector('.numSystem').value);
 
@@ -11,8 +12,8 @@ function converter(number, numSystem) {
     alert('0');
     return;
   }
-  if (number < 0) {
-    alert('Введите положительное число!');
+  if (isNaN(number)) {
+    alert('Введите число!');
     return;
   }
   let remainder;
