@@ -27,5 +27,5 @@ function converter(number, numSystem) {
     number = Math.floor(number / numSystem);
   }
 
-  alert(convertedString);
+  alert(`Результат: ${convertedString}`);
 }
